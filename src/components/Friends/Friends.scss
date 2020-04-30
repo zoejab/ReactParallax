@@ -1,0 +1,74 @@
+@import '../variables';
+
+.friendsWrapper {
+  padding-top:100px;
+
+  .textContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    transform-origin: center;
+    padding-bottom: 40px;
+  }
+
+  .text {
+    position: relative;
+    font-size: 80px;
+    font-weight: bold;
+    display: inline-block;
+    color: $text-color-dark;
+      
+    @media (max-width: 768px) {
+        font-size: 32px;
+        color: $text-color-light;
+        text-shadow: 2px 2px black;
+    }
+  }
+}
+
+.friends {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: #003333;
+  padding-bottom: 50px;
+  
+  h1 {
+    font-size: 72px;
+  }
+
+  .ui.card {
+    margin: 30px;
+    font-size: 18px;
+    min-height: 550px;
+    
+    @media (max-width: 768px) {
+      width: 100%;
+      padding: 20px;
+      min-height: 300px;
+    }
+
+    .header {
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .description {
+      line-height: 1.5;
+    }
+
+    img {
+      background: white;
+      width: 50%;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+
+    .extra.content {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

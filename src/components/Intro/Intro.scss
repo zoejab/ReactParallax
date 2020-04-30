@@ -1,0 +1,101 @@
+@import '../variables';
+
+.intro {
+  height: 90vh;
+  background: url('./elephant.png') $background no-repeat;
+  background-size: contain;
+  background-position: right;
+
+    @media (max-width: 768px) {
+        background-position: 0px 275px;
+        justify-content: flex-start;
+        padding: 50px 20px 0 20px;
+    }
+
+  color: $text-color-dark;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .newsletter {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    
+    img {
+      width: 50%;
+      padding-bottom: 50px;
+
+      @media (max-width: 768px) {
+        width: 80%;
+     }
+
+    }
+  }
+
+  h1 {
+    font-size: 84px;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      font-size: 36px;
+    }
+
+  }
+
+
+  .introText {
+    padding: 30px;
+    line-height: 1.25;
+    font-size: 24px;
+    @media (max-width: 768px) {
+      font-size: 16px;
+   }
+  }
+}
+
+// styling for Hero button and subsequent animation
+.btnContainer {
+  position: relative;
+}
+
+.btn {
+  width: 180px;
+  height: 60px;
+  background: transparent;
+  border: 1px solid darkgrey;
+  outline: none;
+  transition: 1s ease-in-out;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transition: 1s ease-in-out;
+  background: transparent;
+}
+
+.btn:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.btn span {
+  color:$text-color-dark;
+  font-size: 20px;
+  font-weight: 500;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 2s ease-in-out;
+}
